@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSMOS | Explore the Universe</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="header">
+        <nav class="navbar container">
+
+            <a href="#home" class="logo">
+                <span class="logo-icon">✦</span> COSMOS
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+                ☰
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#solar-system">Solar System</a></li>
+                <li><a href="#universe">Universe</a></li>
+                <li><a href="#objects">Cosmic Objects</a></li>
+                <li><a href="#missions">Missions</a></li>
+                <li><a href="#calculator">Distance Calculator</a></li>
+                <li><a href="#mission-planner" class="nav-cta">Plan a Mission</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- HOME -->
+        <section class="hero" id="home">
+
+            <div class="hero-content container">
+
+                <p class="eyebrow">A JOURNEY BEYOND THE STARS</p>
+
+                <h1>
+                    EXPLORE THE
+                    <span>INFINITE UNIVERSE</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover planets, explore distant galaxies, uncover
+                    mysterious cosmic objects and experience the wonders
+                    of the universe.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#solar-system" class="btn btn-primary">
+                        Start Exploring
+                    </a>
+
+                    <a href="#calculator" class="btn btn-outline">
+                        Calculate Distance
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <h3>8</h3>
+                        <p>Planets</p>
+                    </div>
+
+                    <div>
+                        <h3>100B+</h3>
+                        <p>Galaxies (estimated)</p>
+                    </div>
+
+                    <div>
+                        <h3>13.8B</h3>
+                        <p>Years of Cosmic History</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="scroll-indicator">
+                SCROLL TO EXPLORE ↓
+            </div>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+        <section class="section container" id="about">
+
+            <div class="section-heading">
+                <p class="eyebrow">BEYOND OUR WORLD</p>
+                <h2>Welcome to the <span>Cosmos</span></h2>
+
+                <p>
+                    The universe is an enormous expanse containing
+                    billions of galaxies, countless stars, planets
+                    and mysterious celestial phenomena.
+                </p>
+            </div>
+
+            <div class="intro-grid">
+
+                <div class="intro-card">
+                    <span class="card-icon">🪐</span>
+                    <h3>Discover</h3>
+                    <p>Explore planets, moons and fascinating celestial bodies.</p>
+                </div>
+
+                <div class="intro-card">
+                    <span class="card-icon">🌌</span>
+                    <h3>Understand</h3>
+                    <p>Learn about galaxies, nebulae and cosmic phenomena.</p>
+                </div>
+
+                <div class="intro-card">
+                    <span class="card-icon">🚀</span>
+                    <h3>Explore</h3>
+                    <p>Discover humanity's journey through space exploration.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOLAR SYSTEM -->
+        <section class="section section-alt" id="solar-system">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">OUR COSMIC NEIGHBOURHOOD</p>
+                    <h2>Explore the <span>Solar System</span></h2>
+                    <p>
+                        Meet the planets, dwarf planets and natural satellites
+                        orbiting within our solar system.
+                    </p>
+                </div>
+
+                <div class="category-tabs" id="planetFilters">
+                    <button class="filter-btn active" data-filter="planet">Planets</button>
+                    <button class="filter-btn" data-filter="dwarf">Dwarf Planets</button>
+                    <button class="filter-btn" data-filter="moon">Moons</button>
+                </div>
+
+                <div class="explore-grid" id="planetGrid">
+                    <p class="loading">Loading celestial data...</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- UNIVERSE -->
+        <section class="section container" id="universe">
+
+            <div class="section-heading">
+                <p class="eyebrow">BEYOND THE SOLAR SYSTEM</p>
+                <h2>Discover the <span>Universe</span></h2>
+                <p>
+                    Explore the massive structures and glowing objects
+                    scattered throughout the observable universe.
+                </p>
+            </div>
+
+            <div class="category-tabs" id="universeFilters">
+                <button class="filter-btn active" data-filter="star">Stars</button>
+                <button class="filter-btn" data-filter="galaxy">Galaxies</button>
+                <button class="filter-btn" data-filter="nebula">Nebulae</button>
+            </div>
+
+            <div class="explore-grid" id="universeGrid">
+                <p class="loading">Loading cosmic discoveries...</p>
+            </div>
+
+        </section>
+
+
+        <!-- COSMIC OBJECTS -->
+        <section class="section section-alt" id="objects">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">THE MYSTERIES OF SPACE</p>
+                    <h2>Extraordinary <span>Cosmic Objects</span></h2>
+                    <p>
+                        Discover some of the most fascinating and mysterious
+                        objects found in the universe.
+                    </p>
+                </div>
+
+                <div class="explore-grid" id="objectGrid">
+                    <p class="loading">Loading cosmic objects...</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ASTEROIDS AND COMETS -->
+        <section class="section container" id="small-bodies">
+
+            <div class="section-heading">
+                <p class="eyebrow">SMALL WORLDS, BIG STORIES</p>
+                <h2>Asteroids & <span>Comets</span></h2>
+                <p>
+                    Discover the rocky and icy objects travelling through
+                    our solar system.
+                </p>
+            </div>
+
+            <div class="explore-grid" id="smallBodyGrid">
+                <p class="loading">Loading space objects...</p>
+            </div>
+
+        </section>
+
+
+        <!-- COSMIC PHENOMENA -->
+        <section class="section section-alt" id="phenomena">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">THE UNEXPLAINED BEAUTY</p>
+                    <h2>Cosmic <span>Phenomena</span></h2>
+                    <p>
+                        Witness the extraordinary events and invisible forces
+                        that shape our universe.
+                    </p>
+                </div>
+
+                <div class="explore-grid" id="phenomenaGrid">
+                    <p class="loading">Loading cosmic phenomena...</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SPACE MISSIONS -->
+        <section class="section container" id="missions">
+
+            <div class="section-heading">
+                <p class="eyebrow">HUMANITY BEYOND EARTH</p>
+                <h2>Historic Space <span>Missions</span></h2>
+                <p>
+                    Explore the missions that changed our understanding
+                    of the universe.
+                </p>
+            </div>
+
+            <div class="explore-grid" id="missionGrid">
+                <p class="loading">Loading space missions...</p>
+            </div>
+
+        </section>
+
+
+        <!-- COSMIC DISTANCE CALCULATOR -->
+        <section class="section section-alt" id="calculator">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">MEASURE THE COSMOS</p>
+                    <h2>Cosmic Distance <span>Calculator</span></h2>
+                    <p>
+                        Select two celestial objects and explore their
+                        approximate orbital-scale separation.
+                    </p>
+                </div>
+
+                <div class="calculator-box">
+
+                    <div class="form-group">
+                        <label for="objectOne">First Celestial Object</label>
+                        <select id="objectOne">
+                            <option value="">Select first object</option>
+                        </select>
+                    </div>
+
+                    <div class="swap-icon">↔</div>
+
+                    <div class="form-group">
+                        <label for="objectTwo">Second Celestial Object</label>
+                        <select id="objectTwo">
+                            <option value="">Select second object</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary full-btn" id="calculateDistance">
+                        Calculate Distance
+                    </button>
+
+                    <div class="result-box" id="distanceResult">
+                        <p>Select two objects to calculate their distance.</p>
+                    </div>
+
+                    <p class="calculator-note">
+                        Note: This calculator uses simplified average orbital
+                        distances from the Sun. It is an educational estimate,
+                        not the actual real-time distance between moving objects.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MISSION PLANNER -->
+        <section class="section container" id="mission-planner">
+
+            <div class="section-heading">
+                <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+                <h2>Plan Your Space <span>Mission</span></h2>
+                <p>
+                    Design your own fictional space mission and generate
+                    a personalized mission report.
+                </p>
+            </div>
+
+            <div class="mission-form-wrapper">
+
+                <form id="missionForm">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="missionName">Mission Name</label>
+                            <input
+                                type="text"
+                                id="missionName"
+                                placeholder="e.g. Project Odyssey"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <select id="destination" required>
+                                <option value="">Select Destination</option>
+                                <option>Moon</option>
+                                <option>Mars</option>
+                                <option>Jupiter</option>
+                                <option>Saturn</option>
+                                <option>Venus</option>
+                                <option>Mercury</option>
+                                <option>Europa</option>
+                                <option>Titan</option>
+                                <option>Deep Space</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="objective">Mission Objective</label>
+                            <select id="objective" required>
+                                <option value="">Select Objective</option>
+                                <option>Scientific Research</option>
+                                <option>Planet Exploration</option>
+                                <option>Satellite Deployment</option>
+                                <option>Space Observation</option>
+                                <option>Search for Life</option>
+                                <option>Sample Collection</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="duration">Mission Duration</label>
+                            <select id="duration" required>
+                                <option value="">Select Duration</option>
+                                <option value="3">3 Months</option>
+                                <option value="6">6 Months</option>
+                                <option value="12">12 Months</option>
+                                <option value="24">24 Months</option>
+                                <option value="36">36 Months</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="crewSize">Crew Size</label>
+                            <input
+                                type="number"
+                                id="crewSize"
+                                min="1"
+                                max="20"
+                                placeholder="Enter crew members"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="spacecraft">Spacecraft Type</label>
+                            <select id="spacecraft" required>
+                                <option value="">Select Spacecraft</option>
+                                <option>Exploration Shuttle</option>
+                                <option>Research Spacecraft</option>
+                                <option>Orbital Station</option>
+                                <option>Deep Space Probe</option>
+                                <option>Interplanetary Explorer</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="missionDescription">Mission Description</label>
+                        <textarea
+                            id="missionDescription"
+                            rows="4"
+                            placeholder="Describe your mission objectives..."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-btn">
+                        Generate Mission Report 🚀
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- GENERATED REPORT -->
+            <div id="missionReport" class="mission-report hidden">
+
+                <div class="report-top">
+                    <p class="eyebrow">COSMOS MISSION CONTROL</p>
+                    <h2>MISSION REPORT</h2>
+                    <span class="status">MISSION CREATED</span>
+                </div>
+
+                <div id="reportContent"></div>
+
+                <button class="btn btn-outline" id="printReport">
+                    Print Mission Report
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- COSMIC FACTS -->
+        <section class="section fact-section">
+
+            <div class="container fact-content">
+
+                <p class="eyebrow">DID YOU KNOW?</p>
+
+                <h2>Cosmic Fact of the Day</h2>
+
+                <p id="cosmicFact">
+                    Loading an interesting fact about the universe...
+                </p>
+
+                <button class="btn btn-outline" id="newFact">
+                    Discover Another Fact
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+                <a href="#home" class="logo">✦ COSMOS</a>
+                <p>
+                    Explore the universe. Discover the unknown.
+                    Stay curious.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#solar-system">Solar System</a>
+                <a href="#universe">Universe</a>
+                <a href="#missions">Space Missions</a>
+                <a href="#calculator">Distance Calculator</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 COSMOS Space Exploration. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="data/space-data.js"></script>
+    <script src="js/images.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery-effects.js"></script>
+
+</body>
+</html>
